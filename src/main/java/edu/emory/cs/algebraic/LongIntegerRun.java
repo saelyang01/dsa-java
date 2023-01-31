@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class LongIntegerRun {
-    static public void main(String[] args) {
+     public static void main(String[] args) {
         System.out.println(Arrays.toString(args));
 
         LongInteger a = new LongInteger(args[0]);

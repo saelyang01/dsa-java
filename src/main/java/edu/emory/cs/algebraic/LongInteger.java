@@ -148,7 +148,7 @@ public class LongInteger extends SignedNumeral<LongInteger> implements Comparabl
 
     /**
      * @param n the object to be compared.
-     * @return a negative integer, zero, or a positive integer as the absolute value of this object is
+     * @return a negative integer, zero, or a positive integer as the absolute value of this object
      * less than, equal to, or greater than the absolute value of the specified object.
      */
     public int compareAbs(LongInteger n) {
