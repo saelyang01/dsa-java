@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/** @author Jinho D. Choi */
 public class LongIntegerQuizTest {
     @Test
     public void test0() {
