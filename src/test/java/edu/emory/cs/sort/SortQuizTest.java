@@ -5,7 +5,6 @@ import edu.emory.cs.sort.comparison.ShellSortQuiz;
 import edu.emory.cs.sort.distribution.LSDRadixSort;
 import edu.emory.cs.sort.distribution.RadixSortQuiz;
 
-/** @author Jinho D. Choi */
 public class SortQuizTest extends SortTest {
     public void testRobustness() {
         testRobustness(new ShellSortQuiz<>());
