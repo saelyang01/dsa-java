@@ -1,7 +1,7 @@
 package edu.emory.cs.algebraic;
 
 public class Utils {
-    public static int getMiddleIndex(int beginIndex, int endIndex) {
+    public static  int getMiddleIndex(int beginIndex, int endIndex) {
         return beginIndex + (endIndex - beginIndex) / 2;
     }
 
