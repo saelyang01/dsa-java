@@ -59,11 +59,7 @@ public class AutocompleteHW extends Autocomplete<List<String>> {
         node.setValue(selected);
     }
 
-    /**
-     * get all candidates starts with the same prefix
-     * @param prefix
-     * @param candidates
-     */
+
     private void getAllChildren(String prefix, List<String> candidates) {
         TrieNode<List<String>> node = find(prefix);
         if(node == null) {

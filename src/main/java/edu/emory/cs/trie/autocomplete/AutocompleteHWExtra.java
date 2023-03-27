@@ -62,11 +62,7 @@ public class AutocompleteHWExtra extends Autocomplete<Vector<String>> {
         node.setValue(selected);
     }
 
-    /**
-     * get all candidates starts with the same prefix
-     * @param prefix
-     * @param candidates
-     */
+
     private void getAllChildren(String prefix, List<String> candidates) {
         TrieNode<Vector<String>> node = find(prefix);
         if(node == null) {
