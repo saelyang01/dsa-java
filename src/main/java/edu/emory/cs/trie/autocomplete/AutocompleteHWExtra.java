@@ -8,9 +8,7 @@ import java.util.Map;
 import java.util.Vector;
 
 
-/**
- * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
- */
+
 public class AutocompleteHWExtra extends Autocomplete<Vector<String>> {
     public AutocompleteHWExtra(String dict_file, int max) {
         super(dict_file, max);
