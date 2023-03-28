@@ -8,7 +8,9 @@ import java.util.Map;
 import java.util.Vector;
 
 
-
+/**
+ * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
+ */
 public class AutocompleteHWExtra extends Autocomplete<Vector<String>> {
     public AutocompleteHWExtra(String dict_file, int max) {
         super(dict_file, max);
@@ -62,7 +64,11 @@ public class AutocompleteHWExtra extends Autocomplete<Vector<String>> {
         node.setValue(selected);
     }
 
-
+    /**
+     * get all candidates starts with the same prefix
+     * @param prefix
+     * @param candidates
+     */
     private void getAllChildren(String prefix, List<String> candidates) {
         TrieNode<Vector<String>> node = find(prefix);
         if(node == null) {

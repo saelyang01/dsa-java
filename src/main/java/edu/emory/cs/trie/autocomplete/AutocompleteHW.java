@@ -5,7 +5,9 @@ import edu.emory.cs.trie.TrieNode;
 import java.util.*;
 
 
-
+/**
+ * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
+ */
 public class AutocompleteHW extends Autocomplete<List<String>> {
     public AutocompleteHW(String dict_file, int max) {
         super(dict_file, max);
@@ -59,7 +61,11 @@ public class AutocompleteHW extends Autocomplete<List<String>> {
         node.setValue(selected);
     }
 
-
+    /**
+     * get all candidates starts with the same prefix
+     * @param prefix
+     * @param candidates
+     */
     private void getAllChildren(String prefix, List<String> candidates) {
         TrieNode<List<String>> node = find(prefix);
         if(node == null) {
