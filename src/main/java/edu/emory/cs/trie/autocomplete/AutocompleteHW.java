@@ -15,19 +15,23 @@ public class AutocompleteHW extends Autocomplete<List<String>> {
 
     @Override
     public List<String> getCandidates(String prefix) {
+        prefix = prefix.trim();
         TrieNode<List<String>> node = find(prefix);
         if(node == null) {
             return new ArrayList<>();
         }
 
-        List<String> selected = node.getValue();
+        List<String> selected = new ArrayList<>();
+        if(node.getValue() != null ) {
+            selected.addAll(node.getValue());
+        }
+
+
         List<String> candidates = new ArrayList<>();
         getAllChildren(prefix, candidates);
         List<String> result = new ArrayList<>();
-        if(selected != null) {
-            while(result.size() < getMax() && selected.size() > 0) {
-                result.add(selected.remove(0));
-            }
+        while(result.size() < getMax() && selected.size() > 0) {
+            result.add(selected.remove(0));
         }
         if(result.size() == getMax()) {
             return result;
@@ -49,6 +53,7 @@ public class AutocompleteHW extends Autocomplete<List<String>> {
 
     @Override
     public void pickCandidate(String prefix, String candidate) {
+        prefix = prefix.trim();
         TrieNode<List<String>> node = find(prefix);
         if(node == null) {
             return;
@@ -56,9 +61,11 @@ public class AutocompleteHW extends Autocomplete<List<String>> {
         List<String> selected = node.getValue();
         if(selected == null) {
             selected = new ArrayList<>();
+            node.setValue(selected);
         }
+        selected.remove(candidate);
         selected.add(0, candidate);
-        node.setValue(selected);
+
     }
 
     /**
@@ -81,4 +88,6 @@ public class AutocompleteHW extends Autocomplete<List<String>> {
             }
         }
     }
+
+
 }
